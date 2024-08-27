@@ -11,7 +11,7 @@ FRUITS=("Apple" "Kiwi" "Banana" "Orange")
 
 echo "All fruits is ${FRUITS[@]}"
 
-for Name in $FRUITS
+for Name in ${FRUITS[@]}
 do
     echo "Fruit Name is:: $Name"
 
