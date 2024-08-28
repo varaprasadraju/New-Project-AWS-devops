@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NUMBER1=$1  # need to pass values as arguments for the below variables while executing this script
-NUMBER2=$2  # enter the values while running the script
+NUMBER2=$2  # enter/pass the values while running the script
 
 SUM=$(($NUMBER1+$NUMBER2))
 
