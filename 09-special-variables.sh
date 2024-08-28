@@ -8,4 +8,4 @@ echo "Current working directory: $PWD"  # To know the current working directory
 echo "Home directory of current user: $HOME"    # To know the Home directory of current user
 echo "PID of the script executing now: $$"  # To find the Process execution ID which recently ran
 sleep 100 & # To run the command in backgroud
-echo "PID of last background command: $!"   # 
+echo "PID of last background command: $!"   # To see the process execution ID for last background command
