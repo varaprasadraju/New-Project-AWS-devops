@@ -9,7 +9,7 @@ USERID=$(id -u) # # To run a command inside shell script --> $(command)
 if [ $USERID -ne 0 ]
 then
     echo "Please run this script with root priveleges"
-    exit 2
+    exit 1
 fi
 
 dnf install git -y
