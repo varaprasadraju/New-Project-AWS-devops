@@ -1,15 +1,10 @@
 #!/bin/bash
 
-Today=What is today
+NUMBER=$1   # need to pass the value as argument while running the script
 
-if (Today == "Monday" or "Tuesday" or "Wedesday" or "Thursday" or "Friday")
-
-{
-    print "Attend the class"
-}
-
+if [ $NUMBER -gt 20 ] #gt, lt, eq, -ne,
+then
+    echo "Given number: $NUMBER is greater than 20"
 else
-
-{
-    print "No class"
-}
+    echo "Given number: $NUMBER is less than 20"
+fi        
