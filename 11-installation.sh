@@ -6,7 +6,7 @@ USERID=$(id -u) # # To run a command inside shell script --> $(command)
 
 echo "Root user id is: $USERID"
 
-if [ $USERID is -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "Please run this script with root priveleges"
 fi
