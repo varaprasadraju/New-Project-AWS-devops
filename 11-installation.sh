@@ -9,6 +9,12 @@ USERID=$(id -u) # # To run a command inside shell script --> $(command)
 if [ $USERID -ne 0 ]
 then
     echo "Please run this script with root priveleges"
+    exit 2
 fi
 
 dnf install git -y
+
+# "echo $?" it will tell you the state of previous command/Exit status
+# 0 --> Success
+# 1-127 --> Failure
+
