@@ -4,8 +4,8 @@
 
 # echo "Today's date is: $DATE"
 
-date
+date    # command to print the output on the terminal
 echo "the terminal time stamp is date"
 
 #Timestamp=$(date)
-echo "the time stamp is $(date)"
+echo "the time stamp is $(date)" # $(command) syntax to run the command inside the shell script and get its value to the script.

@@ -3,6 +3,7 @@
 PERSON1=$1
 PERSON2=$2
 
+#sh 04 varaiables  suresh prasad
 # variable can be called in 2 ways --> $variable_name or ${variable_name}
 
 echo "$PERSON1:: Hi ${PERSON2}, How are you?"
