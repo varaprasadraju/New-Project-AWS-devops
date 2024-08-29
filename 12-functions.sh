@@ -23,29 +23,29 @@ VALIDATE $?
 #0 --> Success
 #1-127 --> Failure
 
-if [ $? -ne 0 ]
-then
-    echo "Git is not installed, going to install it"
-    dnf install git -y
-else
-    echo "Git is already installed, nothing to do"
-fi   
+# if [ $? -ne 0 ]
+# then
+#     echo "Git is not installed, going to install it"
+#     dnf install git -y
+# else
+#     echo "Git is already installed, nothing to do"
+# fi   
 
 #########################################################################
 
-dnf list installed mysql
+# dnf list installed mysql
 
-if [ $? -ne 0 ]
-then
-    echo "mysql is not installed, going to install it"
-    dnf install mysql -y
-    if [ $? -ne 0 ]
-    then
-        echo "mysql installation is failure, please check"
-        exit 1
-    else
-        echo "mysql is success"
-    fi
-else
-    echo "mysql is already installed, nothing to do"
-fi 
+# if [ $? -ne 0 ]
+# then
+#     echo "mysql is not installed, going to install it"
+#     dnf install mysql -y
+#     if [ $? -ne 0 ]
+#     then
+#         echo "mysql installation is failure, please check"
+#         exit 1
+#     else
+#         echo "mysql is success"
+#     fi
+# else
+#     echo "mysql is already installed, nothing to do"
+# fi 
