@@ -13,7 +13,7 @@
 
 PERSON1=$1
 PERSON2=$2
-PERSON2=$3
+PERSON3=$3
 
 echo "$PERSON1:: Hi $PERSON2, Good moring!"
 echo "$PERSON2:: Hi $PERSON1, Morning!"
