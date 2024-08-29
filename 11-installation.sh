@@ -2,9 +2,9 @@
 
 USERID=$(id -u) # # To run a command inside shell script --> $(command)
 
-# variable can be called in 2 ways --> $variable_name or ${variable_name}
+#variable can be called in 2 ways --> $variable_name or ${variable_name}
 
-# echo "Root user id is: $USERID"
+#echo "Root user id is: $USERID"
 
 if [ $USERID -ne 0 ]
 then
@@ -14,9 +14,9 @@ fi
 
 dnf list installed git
 
-# "echo $?" it will tell you the state of previous command/Exit status
-# 0 --> Success
-# 1-127 --> Failure
+#"echo $?" it will tell you the state of previous command/Exit status
+#0 --> Success
+#1-127 --> Failure
 
 if [ $? -ne 0 ]
 then
