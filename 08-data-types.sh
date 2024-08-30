@@ -6,6 +6,6 @@ NUMBER2=$3
 
 # variable can be called in 2 ways --> $variable_name or ${variable_name}
 
-SUM=$(($NUMBER1+$NUMBER2+$NUMBER3))
+SUM=$((($NUMBER1+$NUMBER2+$NUMBER3)))
 
 echo "Total of $NUMBER1 and $NUMBER2 and $NUMBER3 is = $SUM"
