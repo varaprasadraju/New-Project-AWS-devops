@@ -10,12 +10,12 @@
 # read -s Password
 # echo "Password is: $Password"
 
-# echo "Please enter your Amazon username::"
-# read -s USERNAME #takes input in USERNAME variable
-# echo "Username entered is: $USERNAME"
-# echo "Please enter your Amazon Password::"
-# read -s -p Password
-# echo "Password is: $Password"
+echo "Please enter your Amazon username::"
+read -s -p "Username: " Username #takes input in USERNAME variable
+#echo "Username entered is: $USERNAME"
+echo "Please enter your Amazon Password::"
+read -s -p "Password: " Password
+#echo "Password is: $Password"
 
 
 # Read Password
