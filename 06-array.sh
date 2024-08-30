@@ -10,9 +10,3 @@ echo "Thirt fruit is: ${FRUITS[2]}"
 echo "Fourth fruit is: ${FRUITS[3]}"
 
 echo "All fruits is ${FRUITS[@]}"
-
-# for Name in ${FRUITS[@]}
-# do
-#     echo "Fruit Name is:: $Name"
-
-# done
