@@ -8,10 +8,10 @@ USERID=$(id -u) # # To run a command inside shell script --> $(command)
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
-    echo "$2 is $3"
+    echo "$2 is Failed"
     exit 1
 else 
-    echo "$2 is $4"
+    echo "$2 is Success"
 fi        
 }
 
@@ -23,30 +23,30 @@ fi
 
 dnf list installed git
 
-VALIDATE $? "Listing Git" "Failed" "Success"
+VALIDATE $? "Listing Git"
 
 # #"echo $?" it will tell you the state of previous command
 # #0 --> Success
 # #1-127 --> Failure
 
-# if [ $? -ne 0 ]
-# then
-#     echo "Git is not installed, going to install it"
-#     dnf install git -y
-#     VALIDATE $? "Installing Git"
-# else
-#     echo "Git is already installed, nothing to do"
-# fi   
+if [ $? -ne 0 ]
+then
+    echo "Git is not installed, going to install it"
+    dnf install git -y
+    VALIDATE $? "Installing Git"
+else
+    echo "Git is already installed, nothing to do"
+fi   
 
-# #########################################################################
+#########################################################################
 
-# dnf list installed mysql
+dnf list installed mysql
 
-# if [ $? -ne 0 ]
-# then
-#     echo "mysql is not installed, going to install it"
-#     dnf install mysql -y
-#     VALIDATE $? "Installing Mysql"
-# else
-#     echo "mysql is already installed, nothing to do"
-# fi 
+if [ $? -ne 0 ]
+then
+    echo "mysql is not installed, going to install it"
+    dnf install mysql -y
+    VALIDATE $? "Installing Mysql"
+else
+    echo "mysql is already installed, nothing to do"
+fi 
