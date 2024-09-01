@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i  in {9..19} #10 to 19
+for i  in {9..19} #9 to 19
 
 do
     echo $i
