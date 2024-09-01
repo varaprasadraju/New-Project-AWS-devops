@@ -21,9 +21,9 @@ then
     exit 1
 fi
 
-dnf list installed gitttt
+dnf list installed git
 
-VALIDATE $?
+VALIDATE $? "Listing Git"
 
 # #"echo $?" it will tell you the state of previous command
 # #0 --> Success
