@@ -12,7 +12,7 @@ USERID=$(id -u) # To run a command inside shell script --> $(command) # echo "Ro
 CHECK_ROOT(){
 if [ $USERID -ne 0 ]
 then
-    echo "Please run this script with root priveleges" &>>$LOG_FILE
+    echo "Please run this script with root priveleges" | tee -a $LOG_FILE
     exit 1
 fi
 }
@@ -20,10 +20,10 @@ fi
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
-    echo "$2 is Failed" &>>$LOG_FILE
+    echo "$2 is Failed" &>>$LOG_FILE | tee -a $LOG_FILE
     exit 1
 else 
-    echo "$2 is Success" &>>$LOG_FILE
+    echo "$2 is Success" &>>$LOG_FILE | tee -a $LOG_FILE
 fi        
 }
 
@@ -32,7 +32,7 @@ USAGE(){
     exit 1
 }
 
-echo "Script started executing at: $(date)" &>>$LOG_FILE
+echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 
 CHECK_ROOT
 
@@ -47,10 +47,10 @@ do
     dnf list installed $package &>>$LOG_FILE
     if [ $? -ne 0 ]
 then
-    echo "$package is not installed, going to install it" &>>$LOG_FILE
+    echo "$package is not installed, going to install it" | tee -a $LOG_FILE
     dnf install $package -y &>>$LOG_FILE
     VALIDATE $? "Installing $package" &>>$LOG_FILE
 else
-    echo "$package is already installed, nothing to do" &>>$LOG_FILE
+    echo "$package is already installed, nothing to do" | tee -a $LOG_FILE
 fi 
 done
