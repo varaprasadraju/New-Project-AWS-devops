@@ -28,7 +28,7 @@ else
     echo "Git installation is success"
 else
     echo "Git is already installed, nothing to do"
-fi   
+fi
 
 # #########################################################################
 
