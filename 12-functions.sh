@@ -14,9 +14,10 @@ then
     echo "Please run this script with root priveleges"
     exit 1
 fi
-VALIDATE $?
 
 dnf list installed git
+
+VALIDATE $?
 
 # #"echo $?" it will tell you the state of previous command
 # #0 --> Success
