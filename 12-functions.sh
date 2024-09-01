@@ -6,7 +6,13 @@ USERID=$(id -u) # # To run a command inside shell script --> $(command)
 #echo "Root user id is: $USERID"
 
 VALIDATE(){
-    echo "exit status $1"
+if [ $1 -ne 0 ]
+then
+    echo "Command is Failed"
+    exit 1
+else 
+    echo "Command is Success"
+fi        
 }
 
 if [ $USERID -ne 0 ]
