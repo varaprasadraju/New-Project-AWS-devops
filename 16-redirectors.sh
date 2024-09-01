@@ -48,8 +48,8 @@ do
     if [ $? -ne 0 ]
 then
     echo "$package is not installed, going to install it" | tee -a $LOG_FILE
-    dnf install $package -y | tee -a $LOG_FILE
-    VALIDATE $? "Installing $package" | tee -a $LOG_FILE
+    dnf install $package -y &>>$LOG_FILE
+    VALIDATE $? "Installing $package"
 else
     echo "$package is already installed, nothing to do" | tee -a $LOG_FILE
 fi 
