@@ -27,7 +27,17 @@ else
 fi        
 }
 
+USAGE(){
+    echo -e "USAGE:: sudo sh 16-redirectors.sh package1 package2 ..."
+    exit 1
+}
+
 CHECK_ROOT
+
+if [ $# -eq 0 ]
+then
+    USAGE
+fi
 
 # sh 15 loops.sh Git Mysql Postfix Nginx
 for package in $@   # refere to all arguments passed to it
