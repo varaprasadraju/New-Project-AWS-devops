@@ -16,7 +16,7 @@ then
 fi
 VALIDATE $?
 
-# dnf list installed git
+dnf list installed git
 
 # #"echo $?" it will tell you the state of previous command
 # #0 --> Success
