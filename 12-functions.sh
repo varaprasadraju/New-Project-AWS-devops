@@ -8,10 +8,10 @@ USERID=$(id -u) # # To run a command inside shell script --> $(command)
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
-    echo "Command is Failed"
+    echo "$2 is $3"
     exit 1
 else 
-    echo "Command is Success"
+    echo "$2 is $4"
 fi        
 }
 
@@ -23,7 +23,7 @@ fi
 
 dnf list installed git
 
-VALIDATE $? "Listing Git"
+VALIDATE $? "Listing Git" "Failed" "Success"
 
 # #"echo $?" it will tell you the state of previous command
 # #0 --> Success
